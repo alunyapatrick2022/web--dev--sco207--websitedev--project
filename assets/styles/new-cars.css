@@ -1,0 +1,35 @@
+.new-cars {
+    width: 100vw;
+    max-width: 1440px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 2rem;
+}
+
+.section-header {
+    display: grid;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+.new-cars-content {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 2rem;
+}
+
+.single-new-cars-item {
+    display: grid;
+    justify-content: center;
+}
+
+.row {
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    box-shadow: 3px 3px 6px rgb(150, 150, 150);
+}

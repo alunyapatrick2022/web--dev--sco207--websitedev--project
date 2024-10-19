@@ -20,7 +20,7 @@ body {
     scroll-behavior: smooth;
 }
 
-header, footer {
+footer {
     background-color: var(--secondary-color);
     /* color: var(--text-color); */
 }
@@ -44,10 +44,6 @@ button {
 
 button:hover {
     background-color: #cc5800; /* Darker orange */
-}
-
-section {
-    overflow-x: hidden;
 }
 
 .underline{

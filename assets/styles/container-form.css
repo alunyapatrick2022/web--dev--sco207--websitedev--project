@@ -1,0 +1,59 @@
+.container-form-wrapper {
+    display: grid;
+    justify-content: center;
+}
+
+.container-form {
+    min-height: 50vh;
+}
+
+.container-form-content {
+    width: 70vw;
+    height: 40vh;
+    background-color: whitesmoke;
+    box-shadow: 3px 3px 6px rgb(150, 150, 150);
+}
+
+.container-form-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    column-gap: 2rem;
+    padding: 2rem 2rem;
+}
+
+.search-button {
+    position: relative;
+    left: 20vw;
+    bottom: -2vh;
+    width: fit-content;
+    height: auto;
+}
+
+.search-button input{
+    background: rgb(9, 9, 158);
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-button input:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+select {
+    width: 120px;
+    height: 30px;
+}
+
+fieldset {
+    width: 120px;
+    height: 50px;
+}
+
+option {
+    padding: 10px;
+}

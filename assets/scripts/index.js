@@ -17,11 +17,11 @@ document.getElementById('hamburger-menu').addEventListener('click', function() {
         }, 500);
 
 
-        const text = "Patrick Alunya"; // The text to be typed
+        const text = "APOCARS"; // The text to be typed
         const displayElement = document.getElementById('brand-name');
         let index = 0;
-        const typingSpeed = 100; 
-        const delayBetweenRetypes = 5000; 
+        const typingSpeed = 500; 
+        const delayBetweenRetypes = 6000; 
         
         function typeText() {
             if (index < text.length) {
@@ -38,4 +38,15 @@ document.getElementById('hamburger-menu').addEventListener('click', function() {
         }
         
         typeText(); // Start the typing animation
-         
+
+// Select the header element
+const header = document.getElementById('header');
+
+// Function to change the header background on scroll
+window.onscroll = function () {
+    if (window.scrollY > 100) {  // If the scroll is more than 100px
+        header.classList.add('scrolled');  // Add the 'scrolled' class
+    } else {
+        header.classList.remove('scrolled');  // Remove the 'scrolled' class if scroll is less than 100px
+    }
+};

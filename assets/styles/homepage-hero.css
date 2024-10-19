@@ -1,0 +1,57 @@
+.hero {
+    max-width: 1440px;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.hero-container{
+    display: grid;
+    justify-content: center;
+    min-height: 90vh;
+    background-attachment: fixed;
+}
+
+#background {
+    background-image: url('../images/welcome-hero/welcome-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: carDriveIn 1s ease-in-out;
+}
+@keyframes carDriveIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-text {
+    display: grid;
+    justify-content: center;
+    width: 50vw;
+    align-self: center;
+    justify-self: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 60% opacity */
+    padding: 4rem 2rem;
+    color: white;
+    margin-top: 10rem;
+    min-height: 50vh;
+    width: 70vw;
+    /* Match the footer color with the header */
+    /* background: #004080; */
+    opacity: 1;
+    box-shadow: 1px 1px 3px rgb(230, 230, 230);
+}
+
+.cta-button {
+    position: relative;
+    left: 30%;
+    background: rgb(9, 9, 158);
+    width: fit-content;
+    height: max-content;
+    padding: 20px;
+}
