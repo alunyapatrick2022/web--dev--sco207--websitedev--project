@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APOCARS</title>
+    <title>Home Page | APOCARS</title>
     <link rel="stylesheet" type="text/css" href="./assets/styles/header.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/styles/footer.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/styles/global.css"/>
@@ -11,6 +11,9 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles/homepage-main.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/styles/container-form.css"/>
 	<link rel="stylesheet" type="text/css" href="./assets/styles/new-cars.css"/>
+	<link rel="stylesheet" type="text/css" href="./assets/styles/featured-cars.css"/>
+	<link rel="stylesheet" type="text/css" href="./assets/styles/brands.css"/>
+
     <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 </head>
@@ -18,420 +21,244 @@
     <header id="header">
         <nav>
             <div class="nav-items">
-                <h1 id="brand-name"></h1>
+                <a href="https://apocars-dy9il0nb.b4a.run/"><h1 id="brand-name"></h1></a>
                 <div class="hamburger-menu" id="hamburger-menu">
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul id="nav-links" class="nav-links">
                     <li>
-                        <a href="#home">Home</a>
+                        <a href="#home" target="_parent">Home</a>
                     </li>
                     <li>
-                        <a href="#featured-cars" target="_blank">Featured Cars</a>
+                        <a href="#featured-cars" target="_parent">Featured Cars</a>
                     </li>
                     <li>
-                        <a href="#new-cars" target="_blank">New Cars</a>
+                        <a href="#new-cars" target="_parent">New Cars</a>
                     </li>
                     <li>
-                        <a href="#brands" target="_blank">Brands</a>
+                        <a href="#brands" target="_parent">Brands</a>
                     </li>
                     <li>
-                        <a href="#about-us" target="_blank">About Us</a>
+                        <a href="./about-us.html" target="_blank">About Us</a>
                     </li>
                     <li>
-                        <a href="#contact" target="_blank">Contact Us</a>
+                        <a href="./contact-us.html" target="_blank">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-        <section class="hero">
-            <div class="hero-container" id="background">
-                <div class="hero-text">
-                    <h1>Get Your Dream Car At An Affordable Price</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut atque quam iusto ipsum voluptas, architecto, quia, incidunt nisi placeat sapiente. Cum animi architecto maxime rerum! Laborum quidem aliquid voluptas?</p>
-                    <div class="cta-button">
-                        <a href="https://wa.me/254115348341?text=Hello, Patrick Alunya. I need a good website for my startup business. Please quote for me via WhatsApp. Thank you." class="cta">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="container-form">
-            <div class="container-form-wrapper">
-                <div class="container-form-header">
-                    <h1>Select your specifications here!</h1>
-                </div>
-                <div class="container-form-content">
-                    <form id="form">
-                        <div class="container-form-content-wrapper">
-                            <fieldset>
-                                <legend>Select year</legend>
-                                <div class="select-year">
-                                    <select id="select" name="select" value="Select Year">
-                                        <option>2024</option>
-                                        <option>2023</option>
-                                        <option>2022</option>
-                                        <option>2021</option>
-                                        <option>2020</option>
-                                        <option>2019</option>
-                                        <option>2018</option>
-                                        <option>2017</option>
-                                    </select>
-                                </div>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Select Model</legend>
-                                <div class="select-year">
-                                    <select id="select" name="select" value="Select Year">
-                                        <option>2024</option>
-                                        <option>2023</option>
-                                        <option>2022</option>
-                                        <option>2021</option>
-                                        <option>2020</option>
-                                        <option>2019</option>
-                                        <option>2018</option>
-                                        <option>2017</option>
-                                    </select>
-                                </div>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Body style</legend>
-                                <div class="select-year">
-                                    <select id="select" name="select" value="Select Year">
-                                        <option value="sedan">sedan</option>
-                                        <option value="van">van</option>
-                                        <option value="roadster">roadster</option>
-                                    </select>
-                                </div>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Select Make</legend>
-                                <div class="select-year">
-                                    <select id="select" name="select" value="Select Year">
-                                        <option value="toyota">toyota</option>
-                                        <option value="holden">holden</option>
-                                        <option value="maecedes-benz">maecedes-benz.</option>
-                                    </select>
-                                </div>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Select Price</legend>
-                                <div class="select-year">
-                                    <select id="select" name="select" value="Select Year">
-                                        <option value="default">price</option>
-                                        <option value="$0.00">$0.00</option>
-                                        <option value="$0.00">$0.00</option>
-                                        <option value="$0.00">$0.00</option>
-                                    </select>
-                                </div>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Select Condition</legend>
-                                <div class="select-year">
-                                    <select id="select" name="condition" value="Select Year">
-                                        <option>Brand New</option>
-                                        <option>Refurbished Car</option>
-                                    </select>
-                                </div>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Select Country</legend>
-                                <div class="select-year">
-                                    <select id="select" name="select" value="Select Year">
-                                        <option>Kenya</option>
-                                        <option>Tanzania</option>
-                                        <option>Uganda</option>
-                                        <option>Ethiopia</option>
-                                        <option>Sudan</option>
-                                        <option>Eqypt</option>
-                                        <option>Japan</option>
-                                        <option>China</option>
-                                    </select>
-                                </div>
-                            </fieldset>
-                            <div class="search-button">
-                                <input type="submit" value="Search"/>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <section class="views" id="views"></section>
-        <!-- New Cars Content -->
-        <section id="new-cars" class="new-cars">
-			<div class="container">
-				<div class="section-header">
-					<h2>Checkout <span>The</span> Latest cars</h2>
-					<h3>New cars</h3>
-				</div> 
-				<div class="new-cars-content">
-					<div class="new-cars-content" id="new-cars-carousel">
-						<div class="new-cars-item">
-							<div class="single-new-cars-item">
-								<div class="row">
-										<div class="new-cars-img">
-											<img src="./assets/images/new-cars-model/ferrari 488 superfast.png" alt="ferrari 488 superfast"/>
-										</div>
-										<div class="new-cars-txt">
-											<h2><a href="#">chevrolet camaro <span> za100</span></a></h2>
-											<p>
-												Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-											</p>
-											<p class="new-cars-para2">
-												Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 
-											</p>
-											<button class="welcome-btn new-cars-btn" onclick="window.location.href='#'">
-												view details
-											</button>
-										</div> 	 
-								</div> 
-							</div> 
-						</div> 
-						<div class="new-cars-item">
-							<div class="single-new-cars-item">
-								<div class="row">
-										<div class="new-cars-img">
-											<img src="./assets/images/new-cars-model/chevrolet camaro za100.png" alt="chevrolet camaro za100"/>
-										</div> 
-										<div class="new-cars-txt">
-											<h2><a href="#">BMW series-3 wagon</a></h2>
-											<p>
-												Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-											</p>
-											<p class="new-cars-para2">
-												Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 
-											</p>
-											<button class="welcome-btn new-cars-btn" onclick="window.location.href='#'">
-												view details
-											</button>
-										</div> 	 
-								</div> 	
-							</div> 
-						</div> 
-						<div class="new-cars-item">
-							<div class="single-new-cars-item">
-								<div class="row">
-										<div class="new-cars-img">
-											<img src="./assets/images/new-cars-model/BMW series-3 wagon.png" alt="BMW series-3 wagon"/>
-										</div> 
-										<div class="new-cars-txt">
-											<h2><a href="#">ferrari 488 superfast</a></h2>
-											<p>
-												Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-											</p>
-											<p class="new-cars-para2">
-												Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 
-											</p>
-											<button class="welcome-btn new-cars-btn" onclick="window.location.href='#'">
-												view details
-											</button>
-										</div> 
-								</div> 
-							</div> 
-						</div> 
-					</div> 
-				</div> 
-			</div> 
-
-		</section>
-        <!--featured-cars start -->
-		<section id="featured-cars" class="featured-cars">
-			<div class="container">
-				<div class="section-header">
-					<p>checkout <span>the</span> featured cars</p>
-					<h2>featured cars</h2>
-				</div><!--/.section-header-->
-				<div class="featured-cars-content">
-					<div class="row">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc1.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">BMW 6-series gran coupe</a></h2>
-									<h3>$89,395</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
+	<section class="hero">
+		<div class="hero-container" id="background">
+			<div class="hero-text">
+				<h1>Get Your Dream Car At An Affordable Price</h1>
+				<div class="underline"></div>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut atque quam iusto ipsum voluptas, architecto, quia, incidunt nisi placeat sapiente. Cum animi architecto maxime rerum! Laborum quidem aliquid voluptas?</p>
+				<div class="cta-button">
+					<a href="https://wa.me/254115348341?text=Hello, APOCARS, I still need to see other car brands you sell. Is any other gallery for me to take a look." class="cta">Contact Us</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<main class="homepage-main">
+		<section class="new-cars" id="new-cars">
+			<div class="new-cars-container">
+				<div class="new-cars-container-header">
+					<h1>New Cars</h1>
+					<div class="underline"></div>
+				</div>
+					<div class="new-car-item">
+						<div class="new-car-item-image">
+							<img src="./assets/images/new-cars-model/BMW series-3 wagon.png" alt="BMW Series-3 wagon"/>
+						</div>
+						<div class="new-car-item-text">
+							<h1>BMW Series-3 Wagon</h1>
+							<div class="underline"></div>
+							<p>&pound; 5000</p>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rerum saepe beatae non facere perferendis vero aliquid adipisci iste voluptatem! Amet, qui. Mollitia illum ut modi, alias nihil eveniet tenetur!</p>
+							<div class="new-car-item-button">
+								<a href="#">Contact Us</a>
+								<a href="#">Learn More...</a>
 							</div>
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc2.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">chevrolet camaro <span>wmv20</span></a></h2>
-									<h3>$66,575</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
+						</div>
+					</div>
+					<div class="new-car-item">
+						<div class="new-car-item-text">
+							<h1>Chevrolet Camaro za100</h1>
+							<div class="underline"></div>
+							<p>&pound; 8000</p>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rerum saepe beatae non facere perferendis vero aliquid adipisci iste voluptatem! Amet, qui. Mollitia illum ut modi, alias nihil eveniet tenetur!</p>
+							<div class="new-car-item-button">
+								<a href="#">Contact Us</a>
+								<a href="#">Learn More...</a>
+							</div>
+						</div>
+						<div class="new-car-item-image">
+							<img src="./assets/images/new-cars-model/chevrolet camaro za100.png" alt="chevrolet camaro za100"/>
+						</div>
+					</div>
+					<div class="new-car-item">
+						<div class="new-car-item-image">
+							<img src="./assets/images/new-cars-model/BMW series-3 wagon.png" alt="BMW Series-3 wagon"/>
+						</div>
+						<div class="new-car-item-text">
+							<h1>BMW Series-3 Wagon</h1>
+							<div class="underline"></div>
+							<p>&pound; 5000</p>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rerum saepe beatae non facere perferendis vero aliquid adipisci iste voluptatem! Amet, qui. Mollitia illum ut modi, alias nihil eveniet tenetur!</p>
+							<div class="new-car-item-button">
+								<a href="#">Contact Us</a>
+								<a href="#">Learn More...</a>
+							</div>
+						</div>
+					</div>
+					<div class="new-car-item">
+						<div class="new-car-item-text">
+							<h1>ferrari 488 superfast</h1>
+							<div class="underline"></div>
+							<p>&pound; 6000</p>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rerum saepe beatae non facere perferendis vero aliquid adipisci iste voluptatem! Amet, qui. Mollitia illum ut modi, alias nihil eveniet tenetur!</p>
+							<div class="new-car-item-button">
+								<a href="#">Contact Us</a>
+								<a href="#">Learn More...</a>
+							</div>
+						</div>
+						<div class="new-car-item-image">
+							<img src="./assets/images/new-cars-model/ferrari 488 superfast.png" alt="ferrari 488 superfast"/>
+						</div>
+					</div>
+					<div class="new-car-item">
+						<div class="new-car-item-image">
+							<img src="./assets/images/new-cars-model/BMW series-3 wagon.png" alt="BMW Series-3 wagon"/>
+						</div>
+						<div class="new-car-item-text">
+							<h1>BMW Series-3 Wagon</h1>
+							<div class="underline"></div>
+							<p>&pound; 5000</p>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rerum saepe beatae non facere perferendis vero aliquid adipisci iste voluptatem! Amet, qui. Mollitia illum ut modi, alias nihil eveniet tenetur!</p>
+							<div class="new-car-item-button">
+								<a href="#">Contact Us</a>
+								<a href="#">Learn More...</a>
+							</div>
+						</div>
+					</div>
+			</div>
+		</section>
+		<!-- Hero line to divide the pages -->
+		<hr>
+		<section class="featured-cars" id="featured-cars">
+			<div class="featured-cars-container">
+				<div class="featured-cars-header">
+					<h1>Featured Cars</h1>
+					<div class="underline"></div>
+				</div>
+				<div class="featured-cars-content">
+					<div class="featured-cars-content-left">
+						<div class="featured-cars-content-left-row">
+							<div class="featured-cars-content-left-row-image">
+								<img src="./assets/images/featured-cars/AUDI SERIES CAR 1.png"/>
+							</div>
+							<div class="featured-cars-content-left-row-text">
+								<h2>Audi series az200</h2>
+								<div class="underline"></div>
+								<p>&pound; 2000</p>
+								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quam architecto explicabo optio accusamus deserunt vel praesentium omnis ipsa quisquam. Rerum ut perferendis quaerat a reiciendis. Quasi perspiciatis beatae sunt.</p>
+								<div class="featured-cars-button">
+									<a href="#browse">Browse</a>
+									<a href="#browse">Contact Us</a>
 								</div>
 							</div>
 						</div>
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc3.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">lamborghini <span>v520</span></a></h2>
-									<h3>$125,250</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
+						<div class="featured-cars-content-left-row">
+							<div class="featured-cars-content-left-row-image">
+								<img src="./assets/images/featured-cars/BMW CAR 2.png"/>
+							</div>
+							<div class="featured-cars-content-left-row-text">
+								<h2>BMW Series-19</h2>
+								<div class="underline"></div>
+								<p>&pound; 3000</p>
+								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quam architecto explicabo optio accusamus deserunt vel praesentium omnis ipsa quisquam. Rerum ut perferendis quaerat a reiciendis. Quasi perspiciatis beatae sunt.</p>
+								<div class="featured-cars-button">
+									<a href="#browse">Browse</a>
+									<a href="#browse">Contact Us</a>
 								</div>
 							</div>
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc4.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">audi <span> a3</span> sedan</a></h2>
-									<h3>$95,500</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
+						</div>
+						<div class="featured-cars-content-left-row">
+							<div class="featured-cars-content-left-row-image">
+								<img src="./assets/images/featured-cars/fc3.png"/>
+							</div>
+							<div class="featured-cars-content-left-row-text">
+								<h2>Lamborghini avendeta</h2>
+								<div class="underline"></div>
+								<p>&pound; 2000</p>
+								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quam architecto explicabo optio accusamus deserunt vel praesentium omnis ipsa quisquam. Rerum ut perferendis quaerat a reiciendis. Quasi perspiciatis beatae sunt.</p>
+								<div class="featured-cars-button">
+									<a href="#browse">Browse</a>
+									<a href="#browse">Contact Us</a>
 								</div>
 							</div>
+						</div>
 					</div>
-					<div class="row">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc4.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">infiniti <span>z5</span></a></h2>
-									<h3>$36,850</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
+					<div class="featured-cars-content-right">
+						<div class="featured-cars-content-right-row">
+							<div class="featured-cars-content-right-row-image">
+								<img src="./assets/images/featured-cars/BMW CAR 1.png"/>
+							</div>
+							<div class="featured-cars-content-right-row-text">
+								<h2>BMW series-5 Wagon</h2>
+								<div class="underline"></div>
+								<p>&pound; 8000</p>
+								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quam architecto explicabo optio accusamus deserunt vel praesentium omnis ipsa quisquam. Rerum ut perferendis quaerat a reiciendis. Quasi perspiciatis beatae sunt.</p>
+								<div class="featured-cars-button">
+									<a href="#browse">Browse</a>
+									<a href="#browse">Contact Us</a>
 								</div>
 							</div>
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc5.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">porsche <span>718</span> cayman</a></h2>
-									<h3>$48,500</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
+						</div>
+						<div class="featured-cars-content-right-row">
+							<div class="featured-cars-content-right-row-image">
+								<img src="./assets/images/featured-cars/BMW CAR 1.png"/>
+							</div>
+							<div class="featured-cars-content-right-row-text">
+								<h2>BMW series-5 Wagon</h2>
+								<div class="underline"></div>
+								<p>&pound; 8000</p>
+								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quam architecto explicabo optio accusamus deserunt vel praesentium omnis ipsa quisquam. Rerum ut perferendis quaerat a reiciendis. Quasi perspiciatis beatae sunt.</p>
+								<div class="featured-cars-button">
+									<a href="#browse">Browse</a>
+									<a href="#browse">Contact Us</a>
 								</div>
 							</div>
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc7.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#"><span>bmw 8-</span>series coupe</a></h2>
-									<h3>$56,000</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
+						</div>
+						<div class="featured-cars-content-right-row">
+							<div class="featured-cars-content-right-row-image">
+								<img src="./assets/images/featured-cars/BMW CAR 1.png"/>
+							</div>
+							<div class="featured-cars-content-right-row-text">
+								<h2>BMW series-5 Wagon</h2>
+								<div class="underline"></div>
+								<p>&pound; 8000</p>
+								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quam architecto explicabo optio accusamus deserunt vel praesentium omnis ipsa quisquam. Rerum ut perferendis quaerat a reiciendis. Quasi perspiciatis beatae sunt.</p>
+								<div class="featured-cars-button">
+									<a href="#browse">Browse</a>
+									<a href="#browse">Contact Us</a>
 								</div>
 							</div>
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc8.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">BMW <span> x</span>series-6</a></h2>
-									<h3>$75,800</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-
 		</section>
-		<section id="brand"  class="brand">
-			<div class="container">
-				<div class="brand-area">
-					<div class="owl-carousel owl-theme brand-item">
+		<!-- Hero line do divide the webpage -->
+		<hr>
+		<section id="brands"  class="brand">
+			<div class="brand-container">
+				<div class="brands-header">
+					<h1>Brands</h1>
+					<div class="underline"></div>
+				</div>
+					<div class="brand-area-item">
 						<div class="item">
 							<a href="#">
 								<img src="./assets/images/brand/br1.png" alt="brand-image" />
@@ -461,26 +288,28 @@
 
 						<div class="item">
 							<a href="#">
-								<img src="./assets/images/brand/br6.png" alt="brand-image" />
+								<img src="./assets/images/brand/HONDA.png" alt="brand-image" />
 							</a>
 						</div>
 					</div>
-				</div>
 
 			</div>
 
 		</section> 
-
+		<!-- Hero line do divide the webpage -->
+		<hr>
+	</main>
     <footer>
         <div class="footer-content-wrap">
             <div class="brands">
                 <div class="brand-logo-name">
-                    <div class="brand-logo">P
+                    <div class="brand-logo">
                         <h3>APOCARS</h3>
+						<div class="underline"></div>
                     </div> 
                 </div>
                 <div class="brands-paragraph-content">
-                    <p>Hi. I’m Patrick, and I do Designing and implementation of web apps solutions with a key interest in full stack web development with backend services Integration and communication..</p>
+                    <p>APOCARS is a trusted car dealership offering a wide range of high-quality vehicles. Whether you're looking for brand-new models or reliable pre-owned cars, APOCARS provides excellent service, competitive pricing, and flexible financing options. We aim to meet every customer's unique needs, ensuring a seamless and satisfying car-buying experience.</p>
                 </div> 
                 <div class="social-media-brand-logos">
                     <div>
@@ -503,11 +332,12 @@
             <div class="quick-links">
                 <h3>Quick Links</h3>
                 <div class="underline"></div>
-                <a href="https://electronicsstore-ebxrd7cx.b4a.run/">Home</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="./public/about.html">About</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#contact">Contact</a>
+                <a href="https://apocars-dy9il0nb.b4a.run/">Home</a>
+                <a href="https://apocars-dy9il0nb.b4a.run#feature-cars">Featured Cars</a>
+                <a href="https://apocars-dy9il0nb.b4a.run#new-cars">New Cars</a>
+                <a href="https://apocars-dy9il0nb.b4a.run#brands">Brands</a>
+                <a href="./about-us.html">About Us</a>
+				<a href="./contact-us.html">Contact Us</a>
             </div>
             <div id="contact" class="contact">
                 <h3>Contact</h3>
@@ -542,7 +372,7 @@
         </div>
         <div class="floating-wa-icon">
             <div class="wa-icon">
-                <a href="https://wa.me/254115348341?text=Hello, Patrick Alunya. I need a good website for my startup business. Please quote for me via WhatsApp. Thank you." target="_blank">
+                <a href="https://wa.me/254115348341?text=Hello, APOCARS. I am still interested in exploring other car brands you might have in store. Should be pre-owned cars. Thank you." target="_blank">
                     <img id="wa-icon" src="./assets/icons/Whatsapp icon.png" alt="whatsapp"/>
                 </a>
             </div>

@@ -3,33 +3,65 @@
     max-width: 1440px;
 }
 
-.container {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    row-gap: 2rem;
-}
-
-.section-header {
-    display: grid;
-    justify-content: center;
+.new-cars-container {
     padding: 4rem 2rem;
+    width: 100%;
+    max-width: 1440px;
 }
 
-.new-cars-content {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    row-gap: 2rem;
-}
-
-.single-new-cars-item {
+.new-cars-container-header {
     display: grid;
     justify-content: center;
 }
 
-.row {
-    padding: 4rem 2rem;
+.new-car-item {
     display: grid;
     grid-template-columns: repeat(2, auto);
+    column-gap: 2rem;
+    padding: 4rem 1.5rem;
     align-items: center;
-    box-shadow: 3px 3px 6px rgb(150, 150, 150);
+}
+
+.new-car-item-text {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    row-gap: 2rem;
+}
+
+.new-car-item-button a{
+    border: 2px solid black;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.new-car-item-image:hover {
+    transform: scale(1.1);
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1024px) {
+    .new-car-item-button a{
+        border: 2px solid black;
+        padding: 0.1rem;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .new-car-item {
+        width: 100vw;
+        grid-template-columns: 100%;
+    }
+
+    .new-car-item-image {
+        grid-area: 1 / 1 / 3 / 3; /*Start the item at row 1 and column 1. End the item at row 3 and column 3.*/
+    }
+}
+
+@media (max-width: 425px) {
+    .new-car-item {
+        grid-template-columns: auto;
+    }
 }

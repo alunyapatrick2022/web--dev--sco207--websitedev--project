@@ -1,0 +1,78 @@
+.about-us-hero{
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+}
+.about-us-hero{
+    /* justify-content: center; */
+    align-items: center;
+}
+.about-us-hero {
+    background-color: #273273e1;
+    color: white;
+    min-height: 20vh;
+}
+.hero-text-container h2 {
+    text-align: center;
+    /* position: relative;
+    top: 100px; */
+}
+
+.apocar-about-information {
+    max-width: 1440px;
+    width: 100vw;
+}
+
+.apocar-about-container {
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    row-gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    padding: 4rem 1rem;
+}
+
+.paragrapgh-content {
+    width: 60%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
+    row-gap: 1rem;
+    justify-self: center;
+    box-shadow: 1px 1px 4px rgb(210, 210, 210);
+}
+
+.paragrapgh-content h3 {
+    border-left: 3px solid #273273e1;
+    padding-left: 1rem;
+}
+@media (max-width: 768px){
+    .paragrapgh-content{
+        width: 100%;
+        padding: 0rem;
+    }
+}
+@media (max-width: 1024px) {
+    .paragrapgh-content h3{
+        font-size: 1.3rem;
+        padding-left: 0.25rem;
+        border-left: 2.5px solid #273273e1;
+    }
+}
+
+@media (max-width: 768px) {
+    .paragrapgh-content h3{
+        font-size: 1.3rem;
+        padding-left: 1rem;
+        border-left: 2.5px solid #273273e1;
+    }
+}
+
+@media (max-width: 320px) {
+    .paragrapgh-content h3{
+        font-size: 1.3rem;
+        padding-left: 0.25rem;
+        border-left: 2.5px solid #273273e1;
+    }
+}
+

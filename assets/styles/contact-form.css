@@ -1,0 +1,63 @@
+/*
+    Styling the contact form
+*/
+
+.form-elements {
+    max-width: 1440px;
+    /* width: 50vw; */
+    min-height: 70vh;
+}
+.contact-form {
+    background-color: white;
+    color: #273273;
+    width: 100%;
+    justify-content: left;
+    padding:3rem 2rem;
+    border-radius: 1rem;
+}
+@media(max-width: 425px){
+    .contact-form{
+        padding: 2rem 1rem;
+    }
+}
+
+.contact-form-details {
+    display: grid;
+    grid-template-columns: 40vw;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 1rem;
+    justify-content: center;
+    box-shadow: 1px 1px 3px rgb(230, 230, 230);
+    padding: 1rem;
+}
+
+.contact-form-details textarea{
+    min-height:150px;
+}
+@media (max-width: 320px){
+    .contact-form-details textarea{
+        min-height: 100px;
+    }
+}
+.contact-form-details input[type="email"], .contact-form-details textarea {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #27327373;
+    padding: 1rem;
+    margin-bottom:1rem;
+    border-radius: 2rem;
+}
+.contact-form-details input[type="email"]:focus, .contact-form-details textarea:focus{
+    outline: none;
+    border-color: #273273;
+}
+.contact-form-details input[type="submit"]{
+    width: max-content;
+    padding: 1rem;
+    margin: auto;
+    display: block;
+}
+.contact-form-details input[type="submit"]:hover{
+    cursor: pointer;
+}

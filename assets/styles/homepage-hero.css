@@ -5,19 +5,24 @@
 }
 
 .hero-container{
+    width: 100vw;
+    max-width: 1440px;
     display: grid;
     justify-content: center;
     min-height: 90vh;
-    background-attachment: fixed;
+    padding: 4rem 2rem;
 }
 
 #background {
+    width: 100vw;
+    max-width: 1440px;
     background-image: url('../images/welcome-hero/welcome-banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: unset;
     animation: carDriveIn 1s ease-in-out;
 }
+
 @keyframes carDriveIn {
     0% {
         opacity: 0;
@@ -31,18 +36,12 @@
 
 .hero-text {
     display: grid;
-    justify-content: center;
-    width: 50vw;
+    width: 90vw;
     align-self: center;
-    justify-self: center;
     background-color: rgba(0, 0, 0, 0.5); /* Black background with 60% opacity */
-    padding: 4rem 2rem;
     color: white;
-    margin-top: 10rem;
+    padding: 2rem 1rem;
     min-height: 50vh;
-    width: 70vw;
-    /* Match the footer color with the header */
-    /* background: #004080; */
     opacity: 1;
     box-shadow: 1px 1px 3px rgb(230, 230, 230);
 }
@@ -54,4 +53,11 @@
     width: fit-content;
     height: max-content;
     padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        width: 100vw;
+    }
+
 }

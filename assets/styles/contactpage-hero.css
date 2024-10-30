@@ -1,0 +1,14 @@
+.contactpage-hero {
+    max-width: 1440px;
+    width: 100vw;
+    min-height: 50vh;
+    background: navy;
+}
+
+.contactpage-hero-container{
+    max-width: 1440px;
+    display: grid;
+    justify-items: center;
+    padding: 10rem 2rem;
+    color: white;
+}

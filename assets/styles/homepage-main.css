@@ -1,0 +1,26 @@
+main {
+    width: 100%;
+    max-width: 1440px;
+    background-color: oldlace;
+}
+
+.homepage-main {
+    width: 100%;
+    max-width: 1440px;
+    min-width: none;
+}
+
+@media (max-width: 425px) {
+    .homepage-main {
+        width: 100%;
+        max-width: 1440px;
+    }
+
+    main {
+        width: 100%;
+        max-width: 1440px;
+        background-color: oldlace;
+    }
+}
+
+

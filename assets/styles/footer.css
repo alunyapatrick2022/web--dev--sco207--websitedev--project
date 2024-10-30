@@ -1,7 +1,7 @@
 
 footer{
     background: hsl(210, 100%, 25%); /* Match the footer color with the header */
-    width: 100vw;
+    width: 100%;
     max-width: 1440px;
     position: relative;
     top: auto;
@@ -17,7 +17,7 @@ footer{
     padding: 2rem 4rem;
     max-width: 1440px;
     min-height: 40vh;
-    width: 100vw;
+    width: 100%;
     color: aliceblue;
 }
 
@@ -164,10 +164,8 @@ footer{
     }
 
     .footer-content-wrap {
-        display:grid;
         grid-template-columns: auto;
         grid-template-rows: auto auto;
-        column-gap: 5%;
         row-gap: 2rem;
         justify-content: center;    
     }
@@ -178,7 +176,7 @@ footer{
         right: 40px;
         width: 50px;
         height: 50px;
-        font-size: 20px;
+        font-size: 10px;
         box-shadow: 1px 1px 2px #999;
     }
 }
@@ -208,7 +206,7 @@ footer{
         row-gap: 2rem;
         justify-content: center;
         padding: 4rem 2rem;
-        width: 90vw;
+        width: 100%;
     }
 
     .social-media-brand-logos {
@@ -244,7 +242,7 @@ footer{
         row-gap: 2rem;
         justify-content: center;
         padding: 1rem;
-        width: 100vw;
+        width: 100%;
     }
 
     .contact h3{
@@ -252,7 +250,7 @@ footer{
     }
 
     .copyright-tag {
-        width: 100vw;
+        width: 100%;
         min-height: 10vh;
         display: grid;
     }
