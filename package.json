@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "npm test",
-      "build": "echo 'No build step required'"
+    "build": "echo 'No build step required'"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "mysql2": "^3.11.3"
+    "mysql2": "^3.11.3",
+    "nodemailer": "^6.9.16",
+    "nodemon": "^3.1.7"
   }
 }
