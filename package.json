@@ -4,7 +4,8 @@
   "description": "Contact Form Backend to allow users send messages from the static website",
   "main": "server.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+      "build": "echo 'No build step required'"
   },
   "repository": {
     "type": "git",
