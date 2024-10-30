@@ -26,8 +26,8 @@ const transporter = nodemailer.createTransport({
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD, // replace with your DB password
-    database: process.env.DB_NAME
+    password: process.env.DB_PASSWORD, 
+    // database: process.env.DB_NAME
 });
 
 // Function to initialize the database and table
@@ -45,14 +45,13 @@ const initializeDatabase = () => {
             console.log("Database created or already exists");
 
             // Switch to the new database
-            db.changeUser({ database: "messages_db" }, (err) => {
+            db.changeUser({ database: process.env.DB_NAME }, (err) => {
                 if (err) throw err;
 
                 // Create the messages table if it doesn't exist
                 const createTableQuery = `
                     CREATE TABLE IF NOT EXISTS messages (
                         id INT AUTO_INCREMENT PRIMARY KEY,
-                        name VARCHAR(255) NOT NULL,
                         email VARCHAR(255) NOT NULL,
                         message TEXT NOT NULL,
                         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -89,15 +88,24 @@ app.post("/send-message", (req, res) =>  {
     res.status(200).json({ success: true, message: "Message received!" });
 
     // Set up the email data
-    const mailOptions = {
+    const userMailOptions = {
         from: process.env.EMAIL_USER,  // sender address
         to: email,                      // recipient email address
-        subject: "Message Received Confirmation",
-        text: `Dear Customer,\n\nThank you for your message! We have received it and will get back to you soon.\n\nBest Regards,\nYour APOCARS Team`
+        subject: "no-reply@gmail.com",
+        text: `Dear Customer,\n\nThank you for your message! We have received it and will get back to you soon.\n\nThis an autogenarated system message. Please DO NOT REPLY!\n\nBest Regards,\nYour APOCARS Team`
     };
 
-    // Send the confirmation email
-    transporter.sendMail(mailOptions, (error, info) => {
+      // Set up the notification email for the company
+      const companyMailOptions = {
+        from: "no-reply@gmail.com",
+        to: process.env.EMAIL_USER, // replace with your company's email
+        subject: "New Message Notification",
+        text: `New message received from:\n\n\nEmail: ${email}\nMessage:\n${message}\n\nThis is an automatic notification.`
+    };
+
+
+    // Send the confirmation email to the customer
+    transporter.sendMail(userMailOptions, (error, info) => {
         if (error) {
             console.error("Error sending confirmation email:", error);
             return res.status(500).json({ success: false, message: "Failed to send confirmation email." });
@@ -105,6 +113,16 @@ app.post("/send-message", (req, res) =>  {
         console.log("Confirmation email sent:", info.response);
         res.status(200).json({ success: true, message: "Message received and confirmation email sent!" });
     });
+
+        // Send notification email to the company
+        transporter.sendMail(companyMailOptions, (error, info) => {
+            if (error) {
+                console.error("Error sending notification email:", error);
+                return res.status(500).json({ success: false, message: "Message saved but failed to send notification email." });
+            }
+            console.log("Notification email sent to company:", info.response);
+            res.status(200).json({ success: true, message: "Message received, saved, and confirmation emails sent!" });
+        });
 });
 
 // Start the server

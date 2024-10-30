@@ -4,6 +4,7 @@
   "description": "Contact Form Backend to allow users send messages from the static website",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "npm test",
     "build": "echo 'No build step required'"
   },
