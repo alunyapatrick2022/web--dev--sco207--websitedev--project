@@ -34,6 +34,12 @@
 .contact-form-details textarea{
     min-height:150px;
 }
+
+#status-message {
+    font-size: 1.5rem;
+    text-align: center;
+} 
+
 @media (max-width: 320px){
     .contact-form-details textarea{
         min-height: 100px;

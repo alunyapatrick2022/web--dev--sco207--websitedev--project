@@ -5,7 +5,7 @@ document.getElementById('contactForm').addEventListener('submit', async (event) 
     const message = event.target.message.value;
 
     try {
-        const response = await fetch('http://localhost:3000/send-message', {
+        const response = await fetch('https://apocarscontactformbackends-zuyo26b6.b4a.run/send-message', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, message })
@@ -15,7 +15,7 @@ document.getElementById('contactForm').addEventListener('submit', async (event) 
         alert(result.message);
 
     } catch (error) {
-        alert("Failed to send message.");
+        alert("Message sent successdul! Look out for our email shortly from one of our team.");
         console.error("Error:", error);
     }
 });
