@@ -1,26 +1,26 @@
 .hero {
     max-width: 1440px;
     width: 100vw;
+}
+
+#background{
+    width: 100vw;
     min-height: 100vh;
+    background-image: url('../images/welcome-hero/welcome-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: carDriveIn 1s ease-in-out;
 }
 
 .hero-container{
     width: 100vw;
-    max-width: 1440px;
+    /* max-width: 1440px; */
     display: grid;
     justify-content: center;
+    align-items: center;
     min-height: 90vh;
-    padding: 4rem 2rem;
-}
-
-#background {
-    width: 100vw;
-    max-width: 1440px;
-    background-image: url('../images/welcome-hero/welcome-banner.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: unset;
-    animation: carDriveIn 1s ease-in-out;
+    padding: 4rem auto;
 }
 
 @keyframes carDriveIn {
@@ -36,7 +36,7 @@
 
 .hero-text {
     display: grid;
-    width: 90vw;
+    width: 80vw;
     align-self: center;
     background-color: rgba(0, 0, 0, 0.5); /* Black background with 60% opacity */
     color: white;
@@ -56,8 +56,52 @@
 }
 
 @media (max-width: 768px) {
-    .hero {
+    .hero{
+        width: 100vw;
+    }
+    .hero-container{
+        width: 60vw;
+        min-height: 100vh;
+        padding: 4rem 0;
+    }
+
+    .hero-text {
+        width: 50vw;
+        /* margin-left: 20rem; */
+        padding: 0 auto;
+        min-height: 20vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero{
         width: 100vw;
     }
 
+    .hero-container{
+        min-height: 50vh;
+        padding: 4rem 0;
+    }
+
+    .hero-text {
+        width: 50vw;
+        margin: 4rem 1rem;
+        align-self: center;
+        padding: 5rem 0;
+        min-height: 20vh;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-container{
+        min-height: 90vh;
+        padding: 4rem 0;
+    }
+
+    .hero-text {
+        width: 70vw;
+        /* margin-left: 20rem; */
+        padding: 5rem auto;
+        min-height: 20vh;
+    }
 }

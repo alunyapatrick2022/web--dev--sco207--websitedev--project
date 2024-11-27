@@ -12,7 +12,7 @@
     display: grid;
     justify-content: center;
     padding: 2rem 1.5rem;
-    width: 100vw;
+    width: 70vw;
 }
 
 .brand-area-item {
@@ -20,22 +20,31 @@
     justify-content: center;
     grid-template-columns: repeat(6, auto);
     justify-content: space-between;
-    column-gap: 3rem;
+    column-gap: 2rem;
     padding: 2rem 1rem;
-    width: 100vw;
+    width: 70vw;
 }
 
 @media (max-width: 768px) {
     .brand-area-item {
+        .brand {
+            width: 70vw;
+        }
+        
         column-gap: 2rem;
         grid-template-columns: repeat(3, auto);
-        padding: 3rem 1.5rem;
+        padding: 4rem 0;
     }
 }
 
 @media (max-width: 425px) {
+    .brand {
+        width: 70vw;
+    }
+
     .brand-area-item {
         grid-template-columns: repeat(3, auto);
-        padding: 3rem 1.5rem;
+        column-gap: 2rem;
+        padding: 4rem 1rem;
     }
 }

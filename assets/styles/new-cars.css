@@ -5,7 +5,7 @@
 
 .new-cars-container {
     padding: 4rem 2rem;
-    width: 100%;
+    width: 70vw;
     max-width: 1440px;
 }
 
@@ -15,10 +15,12 @@
 }
 
 .new-car-item {
+    /* width: 50vw; */
     display: grid;
     grid-template-columns: repeat(2, auto);
+    justify-content: center;
     column-gap: 2rem;
-    padding: 4rem 1.5rem;
+    padding: 4rem 2rem;
     align-items: center;
 }
 
@@ -26,6 +28,8 @@
     display: grid;
     grid-template-rows: repeat(5, auto);
     row-gap: 2rem;
+    width: 40vw;
+    /* width: 100vw; */
 }
 
 .new-car-item-button a{
@@ -50,9 +54,10 @@
 }
 
 @media (max-width: 768px) {
+
     .new-car-item {
-        width: 100vw;
-        grid-template-columns: 100%;
+        width: 50vw;
+        grid-template-columns: auto;
     }
 
     .new-car-item-image {
@@ -62,6 +67,27 @@
 
 @media (max-width: 425px) {
     .new-car-item {
+        width: 50vw;
         grid-template-columns: auto;
+        padding: 4rem 0;
+    }
+
+    /* .new-car-item-image img {
+        width: 100vw;
+        height: auto;
+    } */
+}
+
+@media (max-width: 320px) {
+
+    .new-cars {
+        width: 90vw;
+
+    }
+    .new-car-item {
+        width: 100vw;
+        grid-template-columns: auto;
+        padding: 4rem 0;
+        margin-left: 1rem;
     }
 }
