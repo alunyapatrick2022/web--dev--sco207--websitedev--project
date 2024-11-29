@@ -88,7 +88,20 @@
     }
 
     .new-car-item:nth-child(even) {
-        direction: ltr;
+        direction: initial;
+    }
+
+    .new-car-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .new-car-item-image {
+        order: 1;
+    }
+
+    .new-car-item-text {
+        order: 2;
     }
 }
 
