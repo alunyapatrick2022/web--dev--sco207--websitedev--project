@@ -93,14 +93,14 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.cta-button {
+.cta {
     display: inline-block;
     margin-top: 2rem;
     background: var(--primary-color);
     padding: 1rem 2rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
