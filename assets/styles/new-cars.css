@@ -1,93 +1,115 @@
 .new-cars {
-    width: 100vw;
+    width: 100%;
     max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
 .new-cars-container {
-    padding: 4rem 2rem;
-    width: 70vw;
-    max-width: 1440px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
 }
 
 .new-cars-container-header {
-    display: grid;
-    justify-content: center;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .new-car-item {
-    /* width: 50vw; */
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    justify-content: center;
-    column-gap: 2rem;
-    padding: 4rem 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
     align-items: center;
+    padding: 2rem 0;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .new-car-item-text {
     display: grid;
-    grid-template-rows: repeat(5, auto);
-    row-gap: 2rem;
-    width: 40vw;
-    /* width: 100vw; */
+    grid-template-rows: auto;
+    gap: 1.5rem;
 }
 
-.new-car-item-button a{
+.new-car-item-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.new-car-item-image img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.new-car-item-button {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.new-car-item-button a {
     border: 2px solid black;
-    padding: 1rem;
-    border-radius: 10px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
-.new-car-item-image:hover {
-    transform: scale(1.1);
-    transition: 1s ease-in-out;
-    cursor: pointer;
+.new-car-item-button a:hover {
+    background: #000;
+    color: #fff;
 }
 
+.new-car-item-image:hover img {
+    transform: scale(1.05);
+}
 
 @media (max-width: 1024px) {
-    .new-car-item-button a{
-        border: 2px solid black;
-        padding: 0.1rem;
-        border-radius: 5px;
+    .new-cars-container {
+        width: 95%;
+    }
+    
+    .new-car-item {
+        gap: 2rem;
     }
 }
 
 @media (max-width: 768px) {
-
     .new-car-item {
-        width: 50vw;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .new-car-item-image {
-        grid-area: 1 / 1 / 3 / 3; /*Start the item at row 1 and column 1. End the item at row 3 and column 3.*/
+    .new-car-item-button {
+        justify-content: center;
+    }
+
+    .new-car-item:nth-child(even) {
+        direction: ltr;
     }
 }
 
 @media (max-width: 425px) {
-    .new-car-item {
-        width: 50vw;
-        grid-template-columns: auto;
-        padding: 4rem 0;
+    .new-cars {
+        padding: 1rem 0.5rem;
     }
 
-    /* .new-car-item-image img {
-        width: 100vw;
-        height: auto;
-    } */
+    .new-cars-container {
+        width: 100%;
+        padding: 1rem 0.5rem;
+    }
+
+    .new-car-item {
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
 }
 
 @media (max-width: 320px) {
-
-    .new-cars {
-        width: 90vw;
-
-    }
-    .new-car-item {
-        width: 100vw;
-        grid-template-columns: auto;
-        padding: 4rem 0;
-        margin-left: 1rem;
+    .new-car-item-button a {
+        padding: 0.6rem 1rem;
     }
 }

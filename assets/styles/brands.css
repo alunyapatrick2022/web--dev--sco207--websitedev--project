@@ -1,50 +1,88 @@
+
+/* Base styles for brands */
 .brand {
-    width: 100vw;
-    max-width: 1440px;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 0;
 }
 
-.brand-container {
-    display: grid;
-    justify-content: center;
+.brands-header,
+.brand-area-item {
+    width: 80vw;
+    margin: 0 auto;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
 }
 
-.brands-header{
-    display: grid;
-    justify-content: center;
+.brands-header {
     padding: 2rem 1.5rem;
-    width: 70vw;
+    text-align: center;
 }
 
 .brand-area-item {
     display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(6, auto);
-    justify-content: space-between;
-    column-gap: 2rem;
-    padding: 2rem 1rem;
-    width: 70vw;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2.5rem 1.5rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.brand-area-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.brand-area-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .brands-header,
+    .brand-area-item {
+        width: 85vw;
+    }
+}
+
+@media (max-width: 992px) {
+    .brands-header,
+    .brand-area-item {
+        width: 90vw;
+    }
+    
+    .brand-area-item {
+        gap: 1.8rem;
+    }
 }
 
 @media (max-width: 768px) {
+    .brand {
+        padding: 1.5rem 0;
+    }
+    
+    .brands-header {
+        padding: 1.8rem 1.2rem;
+    }
+    
     .brand-area-item {
-        .brand {
-            width: 70vw;
-        }
-        
-        column-gap: 2rem;
-        grid-template-columns: repeat(3, auto);
-        padding: 4rem 0;
+        padding: 2rem 1.2rem;
+        gap: 1.5rem;
     }
 }
 
-@media (max-width: 425px) {
-    .brand {
-        width: 70vw;
-    }
-
+@media (max-width: 480px) {
+    .brands-header,
     .brand-area-item {
-        grid-template-columns: repeat(3, auto);
-        column-gap: 2rem;
-        padding: 4rem 1rem;
+        width: 95vw;
+    }
+    
+    .brand-area-item img {
+        max-width: 250px;
     }
 }

@@ -1,16 +1,17 @@
 *{
     box-sizing: border-box;
-    margin: auto;
-    padding: auto;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
 }
 
-/* Vibrant Orange & Dark Gray */
 :root {
     --primary-color: #FF6F00;
     --secondary-color: #212121;
     --accent-color: #F5F5F5;
     --text-color: #FFFFFF;
+    --hover-color: #cc5800;
+    --max-width: 1440px;
 }
 
 body {
@@ -22,16 +23,16 @@ body {
 
 footer {
     background-color: var(--secondary-color);
-    /* color: var(--text-color); */
 }
 
 a {
     color: var(--primary-color);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #cc5800; /* Darker orange */
+    color: var(--hover-color);
 }
 
 button {
@@ -40,68 +41,63 @@ button {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #cc5800; /* Darker orange */
+    background-color: var(--hover-color);
 }
 
-.underline{
+.underline {
     width: 100px;
-    background-color: #ff9900;
+    background-color: var(--primary-color);
     height: 2px;
+    margin: 10px auto;
 }
 
-h1{
-    font-size: 2.2rem;
+h1 { font-size: 2.2rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.3rem; }
+p { font-size: 1.1rem; }
+
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.6rem; }
 }
 
-h2{
-    font-size: 2rem;
-}
-
-h3{
-    font-size: 1.8rem;
-}
-
-h4{
-    font-size:1.3rem;
-}
-
-p{
-    font-size: 1.1rem;
-}
-
-@media(max-width: 768px) {
-    h1{
-        font-size: 2rem;
-    }
-
-    /* .underline {
-        display: none;
-    } */
-}
-
-@media(max-width: 425px) {
-    .underline{
-        display: none;
-    }
-
-    h2,h3,h4 {
-        border-bottom: 2px solid #ff9900;
+@media (max-width: 425px) {
+    .underline { display: none; }
+    h2, h3, h4 { 
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 5px;
     }
 }
 
-@media(max-width: 320px) {
-    .underline{
-        display: none;
+@media (max-width: 320px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.4rem; }
+    h4 { font-size: 1.2rem; }
+    p { font-size: 1rem; }
+}
+
+@media (min-width: 1440px) {
+    body {
+        max-width: 2560px;
+        margin: 0 auto;
     }
 
-    h1{
-        font-size: 1.8rem;
-    }
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.4rem; }
+    h3 { font-size: 2rem; }
+    h4 { font-size: 1.6rem; }
+    p { font-size: 1.3rem; }
 
-    h2,h3,h4 {
-        border-bottom: none;
+    .underline {
+        width: 150px;
+        height: 3px;
+        margin: 15px auto;
     }
 }
